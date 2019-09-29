@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tsyupilo | Создание современных веб-страниц</title>
+    <meta keywords="">
+    <meta description="">
+    <meta author="Bogdan Tsyupilo">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style/bootstrap-grid.min.css"> <!-- Grid BS4 -->
+    <link rel="stylesheet" type="text/css" href="style/animate.css"> <!-- Animation -->
+    <link rel="stylesheet" type="text/css" href="style/style.css"> <!-- Custom CSS -->
+    <!-- SLIDER -->
+    <link rel="stylesheet" type="text/css" href="style/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="style/slick-theme.css"/>
+    <!-- JS -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script> <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script> <!-- Slider -->
+    <script type="text/javascript" src="js/wow.min.js"></script> <!-- Wow (for animation) -->
+    <!-- Wow init -->
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Slider init -->
+    <script>
+      $(document).ready(function(){
+        $('.slider').slick({
+          centerMode: true,
+          centerPadding: '200px',
+          slidesToShow: 2,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerPadding: '50px',
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerPadding: '20px',
+                slidesToShow: 1
+              }
+            }
+          ]
+        }),
+        document.querySelector('.slick-next').innerHTML = '<img src="img/ico/rarrow.svg" alt="Arrow">',
+        document.querySelector('.slick-prev').innerHTML = '<img src="img/ico/larrow.svg" alt="Arrow">';
+      });
+    </script>
+    <!-- Progress bar JS -->
+    <script>
+      $(window).on("scroll resize", function() {
+        let o = $(window).scrollTop() / ($(document).height() - $(window).height());
+        $(".progress-bar").css({
+          "width": (100 * o | 0) + "%"
+        });
+        $('progress')[0].value = o;
+      });
+    </script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <progress value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+
+  <!-- Header-screen -->
+  <section class="header wow fadeIn" data-wow-duration="0.4s">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          
+      <div class="text-logo" data-wow-delay="0.0s">
+          tsyupilo
+        </div>
+        <h1 class="text-hero wow fadeInLeft" data-wow-delay="0.1s">
+          Разработка <br> современных <br> веб-сайтов
+        </h1>
+  
+        <div class="text-description wow fadeInLeft" data-wow-delay="0.2s">
+          <p>
+            Меня зовут Богдан, я разрабатываю отзывчивые и интерактивные веб-страницы для любых Ваших нужд. <br><br> Напишите мне, если захотите связаться
+          </p>
+  
+          <a href="#footer" class="button" id="teleport" data-wow-delay="0.3s">
+            Написать
+          </a>
+        </div>
+  
+      </div>
+      <div class="col-6">
+
+          <div class="header-avatar wow fadeInRight" data-wow-delay="0.5s">
+            <img src="img/home-avatar.png" alt="Avatar">
+          </div>
+  
+        </div>
+      </div>
+                
+      <div class="section-bar">
+        <img src="img/section-bar-01.png" alt="">
+        <img src="img/section-bar-01a.png" class="wow fadeIn" data-wow-delay="0.2s" alt="">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section class="about wow fadeIn">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="row desk-no pos-rel">
+              <h2 class="text-title wow fadeInLeft" data-wow-delay="0.1s">
+                  Разработка веб-проекта от автора
+              </h2>
+          </div>
+          <div class="row desk-no">
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.35s">
+              <div class="text-description__img">
+                <img src="img/ico/javascript.svg" alt="JS logo">
+              </div>
+              <p>
+                JavaScript
+              </p>
+            </div>
+            <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.4s">
+              <div class="text-description__img">
+                <img src="img/ico/sass.svg" alt="SASS logo">
+              </div>
+              <p>
+                SASS for CSS
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+
+          <h2 class="text-title wow fadeInRight mob-no" data-wow-delay="0.1s">
+            Разработка веб-проекта от автора
+          </h2>
+          
+          <div class="text-description">
+            <p id="text" class="wow fadeInRight" data-wow-delay="0.2s">
+              В разработке веб-сайта используется последние технологии и инструменты современной веб-индустрии, благодаря чему итоговый проект выглядит качественно и актуально.
+            </p>
+            <div class="row">
+              <div class="col-md-6 wow fadeInRight" data-wow-delay="0.25s">
+                <div class="text-description__img">
+                  <img src="img/ico/html-5.svg" alt="HTML5 logo">
+                </div>
+                <p>
+                    HTML 5
+                </p>
+              </div>
+              <div class="col-md-6 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="text-description__img">
+                  <img src="img/ico/css.svg" alt="CSS3 logo">
+                </div>
+                <p>
+                    CSS 3
+                </p>
+              </div>
+            </div>
+            <div class="row mob-no">
+              <div class="col-md-6 wow fadeInRight" data-wow-delay="0.35s">
+                <div class="text-description__img">
+                  <img src="img/ico/javascript.svg" alt="JS logo">
+                </div>
+                <p>
+                  JavaScript
+                </p>
+              </div>
+              <div class="col-md-6 wow fadeInRight" data-wow-delay="0.4s">
+                <div class="text-description__img">
+                  <img src="img/ico/sass.svg" alt="SASS logo">
+                </div>
+                <p>
+                  SASS for CSS
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+      <div class="section-bar">
+        <img src="img/section-bar-02.png" alt="">
+        <img src="img/section-bar-02a.png" class="wow fadeIn" data-wow-delay="0.2s" alt="">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portfolio section -->  
+  <section class="portfolio wow fadeIn">
+    <div class="container">
+      <div class="text-title wow fadeinLeft" data-wow-delay="0.1s">
+        Выполненные<br>работы
+      </div>
+    </div>
+    <div class="slider">
+      <div class="slider-img">
+        <a href="http://heroesandmagic.com" target="_blank">
+          <img src="img/slider/slider01.jpg" alt="HeroesAndMagic.com">
+        </a>
+      </div>
+      <div class="slider-img">
+        <a href="http://minutkacafe.ru" target="_blank">
+          <img src="img/slider/slider02.jpg" alt="MinutkaCafe.ru">
+        </a>
+      </div>
+      <div class="slider-img">
+        <a href="http://rayskaya-gavan.ru" target="_blank">
+          <img src="img/slider/slider03.jpg" alt="Rayskaya-Gavan.ru">
+        </a>
+      </div>
+      <div class="slider-img">
+        <a href="http://катерлез-земстройпроект.рф" target="_blank">
+          <img src="img/slider/slider04.jpg" alt="Катерлез-ЗемСтройпроект.рф">
+        </a>
+      </div>
+      <div class="slider-img">
+        <a href="http://soleniypes.ru" target="_blank">
+          <img src="img/slider/slider05.jpg" alt="SoleniyPes.ru">
+        </a>
+      </div>
+    </div>
+    <div class="section-bar">
+      <img src="img/section-bar-03.png" alt="">
+      <img src="img/section-bar-03a.png" class="wow fadeIn" data-wow-delay="0.2s" alt="">
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <section class="footer" id="footer" name="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 wow fadeInLeft">
+          <div class="text-subtitle">
+            Связаться
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="subtext-title wow fadeInRight" data-wow-delay="0.2s">
+            Напишите мне
+          </div>
+          <div class="subtext-description wow fadeInRight" data-wow-delay="0.3s">
+            Если Вы заинтересовались разработкой собственного веб-сайта, предлагаю связаться со мной любым из способов
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 wow fadeInUp">
+          <a href="" target="_blank">
+            <img src="img/ico/skype.svg" title="Skype" alt="skype">
+          </a>
+        </div>
+        <div class="col-2 wow fadeInUp" data-wow-delay="0.2s">
+          <a href="" target="_blank">
+            <img src="img/ico/telegram.svg" title="Telegram" alt="telegram">
+          </a>
+        </div>
+        <div class="col-2 wow fadeInUp" data-wow-delay="0.4s">
+          <a href="" target="_blank">
+            <img src="img/ico/vk.svg" title="VK" alt="vk">
+          </a>
+        </div>
+        <div class="col-2 wow fadeInUp" data-wow-delay="0.2s">
+          <a href="" target="_blank">
+            <img src="img/ico/whatsapp.svg" title="What's App" alt="what's app">
+          </a>
+        </div>
+        <div class="col-2 wow fadeInUp">
+          <a href="" target="_blank">
+            <img src="img/ico/viber.svg" title="Viber" alt="viber">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
